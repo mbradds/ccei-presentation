@@ -1,3 +1,21 @@
+const cerPalette = {
+  "Night Sky": "#054169",
+  Sun: "#FFBE4B",
+  Ocean: "#5FBEE6",
+  Forest: "#559B37",
+  Flame: "#FF821E",
+  Aubergine: "#871455",
+  "Dim Grey": "#8c8c96",
+  "Cool Grey": "#42464B",
+  hcBlue: "#7cb5ec",
+  hcGreen: "#90ed7d",
+  hcPink: "#f15c80",
+  hcRed: "#f45b5b",
+  hcAqua: "#2b908f",
+  hcPurple: "#8085e9",
+  hcLightBlue: "#91e8e1",
+};
+
 function exampleChart(div) {
   Highcharts.chart(div, {
     title: {
@@ -339,6 +357,126 @@ function highchartsStuff(div) {
   hcList.innerHTML = totalHtml;
 }
 
+function pageSizeChart(div) {
+  return new Highcharts.chart(div, {
+    chart: {
+      type: "column",
+    },
+    title: {
+      text: "Total network transfer size: Lower is better",
+    },
+    xAxis: {
+      categories: true,
+      labels: {
+        style: {
+          fontSize: "14px",
+          color: cerPalette["Cool Grey"],
+        },
+      },
+    },
+    credits: {
+      text: "",
+    },
+    yAxis: {
+      min: 0,
+      title: {
+        text: "",
+      },
+      labels: {
+        style: {
+          fontSize: "14px",
+          color: cerPalette["Cool Grey"],
+        },
+      },
+      stackLabels: {
+        enabled: true,
+        style: {
+          fontWeight: "bold",
+          color: cerPalette["Cool Grey"],
+          fontSize: "14px",
+        },
+        formatter: function () {
+          return `${this.total} MB`;
+        },
+      },
+    },
+    legend: {
+      itemStyle: {
+        fontSize: "16px",
+      },
+    },
+    tooltip: {
+      // headerFormat: "<b>{point.x}</b><br/>",
+      // pointFormat: "{series.name}: {point.y}<br/>Total: {point.stackTotal}",
+    },
+    plotOptions: {
+      column: {
+        stacking: "normal",
+        dataLabels: {
+          enabled: false,
+        },
+      },
+    },
+    series: [
+      {
+        name: "CER",
+        data: [{ name: "NGTL Profile (3 months ago)", y: 6.2 }],
+        color: cerPalette["Sun"],
+        showInLegend: true,
+      },
+      {
+        name: "Non-CER",
+        data: [{ name: "NYT Front Page", y: 5.7 }],
+        color: cerPalette["Night Sky"],
+        showInLegend: true,
+      },
+      {
+        name: "Non-CER",
+        data: [{ name: "CCEI Front Page (now)", y: 5.5 }],
+        color: cerPalette["Night Sky"],
+        showInLegend: false,
+      },
+      {
+        name: "CER",
+        data: [{ name: "Crude Runs (1 week ago)", y: 4.5 }],
+        color: cerPalette["Sun"],
+        showInLegend: false,
+      },
+      {
+        name: "CER",
+        data: [{ name: "NGTL Profile (now)", y: 3.9 }],
+        color: cerPalette["Sun"],
+        showInLegend: false,
+      },
+      {
+        name: "Non-CER",
+        data: [{ name: "CCEI Front Page (potential)", y: 2.4 }],
+        color: cerPalette["Night Sky"],
+        showInLegend: false,
+      },
+      {
+        name: "Non-CER",
+        data: [{ name: "EIA Crude Imports (Highcharts)", y: 2 }],
+        color: cerPalette["Night Sky"],
+        showInLegend: false,
+      },
+      {
+        name: "CER",
+        data: [{ name: "Conditions Data Viz", y: 1.6 }],
+        color: cerPalette["Sun"],
+        showInLegend: false,
+      },
+      {
+        name: "CER",
+        data: [{ name: "Crude Runs (now)", y: 0.596 }],
+        color: cerPalette["Sun"],
+        showInLegend: false,
+      },
+    ],
+  });
+}
+
 exampleChart("example-chart");
 exampleMap("example-map");
 highchartsStuff("highcharts-stuff");
+pageSizeChart("page-sise-chart");

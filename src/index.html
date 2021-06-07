@@ -26,22 +26,23 @@
         </ul>
         <div class="tabpanels">
           <div role="tabpanel" id="panel1" class="in fade no-scroll">
+            <h2>Today's Agenda</h2>
             <div class="row">
               <div class="col-md-12">
                 <section class="panel panel-default">
                   <header class="panel-heading">
-                    <h5 class="panel-title">Today's Agenda</h5>
+                    <h5 class="panel-title">Anything to add?</h5>
                   </header>
                   <div class="panel-body">
                     <ul class="lst-spcd">
+                      <li>Introductions</li>
                       <li>What is Highcharts?</li>
                       <li>How have we used Highcharts at the CER?</li>
                       <li>Is Highcharts better than Tableau or PowerBI?</li>
                       <li>Reasons not to switch</li>
-                      <li>The JavaScript ecosystem</li>
-                      <li>Licenses</li>
-                      <li>Challenges</li>
-                      <li>Opportunities</li>
+                      <li>Why Highcharts specifically?</li>
+                      <li>What's next?</li>
+                      <li>Questions?</li>
                     </ul>
                   </div>
                 </section>
@@ -49,7 +50,7 @@
             </div>
           </div>
           <div role="tabpanel" id="panel2" class="out fade no-scroll">
-            <h2>What is Highcharts? Example:</h2>
+            <h2>What is Highcharts?</h2>
             <div class="row">
               <div class="col-md-12">
                 <section class="panel panel-default">
@@ -106,12 +107,6 @@
                         More on this later.
                       </li>
                       <li>
-                        This is a basic example, and looking at the actual code
-                        can be misleading. Building something with custom
-                        requirements and more complicated data needs some more
-                        JavaScript expertise.
-                      </li>
-                      <li>
                         Highmaps is really good for creating simple, easy to use
                         maps. For more complicated mapping functionality,
                         somthing like Leaflet is a good option. More on this
@@ -149,6 +144,14 @@
                   tools would you bring to the worksite? What would happen if
                   you showed up with only a hammer in your toolbox? This is a
                   classic technology pitfall of most large organizations!
+                </p>
+                <p>
+                  Are we interested in creating high quality
+                  <strong>web based</strong>
+                  dashboards and data products for
+                  <strong>external audiences</strong>? If so, then take a look
+                  at some of the reasons to switch! If not, then we can probably
+                  end the presentation here...
                 </p>
                 <h3>Reasons to switch</h3>
                 <section class="panel panel-default">
@@ -235,6 +238,12 @@
                       the vizualization runs inside the users web browser,
                       eliminating the need for an iframe.
                     </p>
+                    <p>
+                      <strong>Note:</strong> This is only an issue on the web!
+                      When creating Tableau/PowerBI dashboards on your computer,
+                      you wont notice this issue, because the vizualization is
+                      running on your local computer, instead of a server.
+                    </p>
                   </div>
                 </section>
                 <section class="panel panel-default">
@@ -260,7 +269,25 @@
                     <h5 class="panel-title">3. Network transfer size & SEO</h5>
                   </header>
                   <div class="panel-body">
-                    <p>...</p>
+                    <div id="page-sise-chart"></div>
+                    <ul>
+                      <li>
+                        CCEI front page currently transfers 5.5MB uncached. This
+                        could be <strong>cut by 56%</strong> by moving to
+                        Highcharts.
+                      </li>
+                      <li>
+                        CCEI front page currently requests 67 domains. This
+                        could be cut to 27 (<strong>59% improvement</strong>) by
+                        moving to Highcharts.
+                      </li>
+                    </ul>
+                    <p>
+                      Improvements in both page size and total number of network
+                      requests could go a long way to improving the user
+                      experience, and improve SEO. Google doesnt like large,
+                      slow pages.
+                    </p>
                   </div>
                 </section>
                 <section class="panel panel-default">
@@ -353,6 +380,63 @@
                       critical? Users dont like giving their exact location to
                       websites, and probably not to government websites. We can
                       prove that we are not saving this information!
+                    </p>
+                  </div>
+                </section>
+                <section class="panel panel-default">
+                  <header class="panel-heading">
+                    <h5 class="panel-title">7. JavaScript Ecosystem</h5>
+                  </header>
+                  <div class="panel-body">
+                    <p>
+                      Moving to Highcharts unlocks the benefits that come with
+                      the JavaScript ecosystem/community. Highcharts plays
+                      nicely with the official Government of Canada styles (web
+                      experience toolkit), helping to create a common look and
+                      feel.
+                    </p>
+                    <p>
+                      Highcharts plays nicely with other open source (and fully
+                      free) software, such as leaflet for advanced mapping. This
+                      ensures that you can use the absolute best tool for the
+                      job!
+                    </p>
+                    <p>
+                      What happens when something better than Highcharts comes
+                      along? Switching from one web based charting framework to
+                      another is much easier than the initial shift from PowerBI
+                      to Highcharts.
+                    </p>
+                    <p>
+                      The JavaScript ecosystem allows for much easier sharing of
+                      work, and re-using old work compared to Tableau or
+                      PowerBI. NPM (node package manager), allows me to download
+                      and use JavaScript packages (such as Highcharts), but I
+                      can also create my own NPM packages that others can use.
+                    </p>
+                  </div>
+                </section>
+                <section class="panel panel-default">
+                  <header class="panel-heading">
+                    <h5 class="panel-title">8. Price $</h5>
+                  </header>
+                  <div class="panel-body">
+                    <p>
+                      I dont know the exact price tag for Tableau or PowerBI,
+                      but the difference compared to Highcharts may be
+                      significant. The difference in price must be weighed
+                      against the const of adopting a new technology,
+                      re-training, etc.
+                    </p>
+                    <p>
+                      Highcharts + Highmaps
+                      <a
+                        href="https://shop.highsoft.com/developer-license"
+                        target="_blank"
+                        >license</a
+                      >
+                      costs <strong>722 USD</strong>. This is a one time
+                      payment, with one year of product support.
                     </p>
                   </div>
                 </section>
