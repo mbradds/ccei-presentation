@@ -1,0 +1,13 @@
+.tabpanels {
+  padding-top: 30px;
+  overflow-x: hidden !important;
+}
+
+.no-scroll {
+  overflow-x: hidden !important;
+}
+
+h2 {
+  margin-top: 0px !important;
+}
+

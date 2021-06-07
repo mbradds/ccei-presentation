@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./GCWeb/assets/favicon.ico" rel="icon" type="image/x-icon" />
+    <link rel="stylesheet" href="main.css" as="style" />
+    <link rel="stylesheet" href="./GCWeb/css/theme.min.css" />
+    <link rel="stylesheet" href="./GCWeb/css/gcwu.custom.css" />
+    <noscript
+      ><link rel="stylesheet" href="./GCWeb/wet-boew/css/noscript.min.css"
+    /></noscript>
+
+    <title>CCEI - Highcharts</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>CER-CCEI Highcharts Presentation</h1>
+      <div class="wb-tabs carousel-s1 mrgn-tp-lg">
+        <ul role="tablist">
+          <li class="active"><a href="#panel1">Tab 1:</a></li>
+          <li><a href="#panel2">Tab 2:</a></li>
+          <li><a href="#panel3">Tab 3:</a></li>
+        </ul>
+        <div class="tabpanels">
+          <div role="tabpanel" id="panel1" class="in fade no-scroll">
+            <div class="row">
+              <div class="col-md-12">
+                <section class="panel panel-default">
+                  <header class="panel-heading">
+                    <h5 class="panel-title">Today's Agenda</h5>
+                  </header>
+                  <div class="panel-body">
+                    <ul class="lst-spcd">
+                      <li>What is Highcharts?</li>
+                      <li>How have we used Highcharts at the CER?</li>
+                      <li>Highcharts vs Tableau vs PowerBI</li>
+                      <li>The JavaScript ecosystem</li>
+                      <li>Licenses</li>
+                      <li>Challenges</li>
+                      <li>Opportunities</li>
+                    </ul>
+                  </div>
+                </section>
+              </div>
+            </div>
+          </div>
+          <div role="tabpanel" id="panel2" class="out fade no-scroll">
+            <h2>What is Highcharts? Example:</h2>
+            <div class="row">
+              <div class="col-md-12">
+                <section class="panel panel-default">
+                  <header class="panel-heading">
+                    <h5 class="panel-title">Chart</h5>
+                  </header>
+                  <div class="panel-body">
+                    <div id="example-chart"></div>
+                  </div>
+                  <footer class="panel-footer">
+                    Code:
+                    <a
+                      href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/line-basic"
+                      target="_blank"
+                      >JS Fiddle</a
+                    >
+                  </footer>
+                </section>
+                <section class="panel panel-default">
+                  <header class="panel-heading">
+                    <h5 class="panel-title">Map - Real Time Data</h5>
+                  </header>
+                  <div class="panel-body">
+                    <div id="example-map"></div>
+                  </div>
+                  <footer class="panel-footer">
+                    Code:
+                    <a
+                      href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/maps/demo/eu-capitals-temp"
+                      target="_blank"
+                      >JS Fiddle</a
+                    >
+                  </footer>
+                </section>
+                <section class="panel panel-default">
+                  <header class="panel-heading">
+                    <h5 class="panel-title">Key Points</h5>
+                  </header>
+                  <div class="panel-body">
+                    <ul>
+                      <li>
+                        Highcharts, like most JavaScript frameworks is mobile
+                        optimized by default.
+                      </li>
+                      <li>
+                        Highcharts plays nicely with other web technologies.
+                        More on this later.
+                      </li>
+                      <li>
+                        This is a basic example, and looking at the actual code
+                        can be misleading. Building something with custom
+                        requirements and more complicated data needs some more
+                        JavaScript expertise.
+                      </li>
+                      <li>
+                        Highmaps is really good for creating simple, easy to use
+                        maps. For more complicated mapping functionality,
+                        somthing like Leaflet is a good option. More on this
+                        later.
+                      </li>
+                    </ul>
+                  </div>
+                </section>
+              </div>
+            </div>
+          </div>
+          <div role="tabpanel" id="panel3" class="out fade no-scroll">
+            <h2>Where have we used Highcharts so far?</h2>
+            <div class="row">
+              <div class="col-md-12" id="highcharts-stuff">
+                <!-- <section class="panel panel-default">
+                  <header class="panel-heading">
+                    <h5 class="panel-title">1. Canada Pipeline System 2021</h5>
+                  </header>
+                  <div class="panel-body">
+                    <ul class="lst-spcd">
+                      <li>Production link:</li>
+                      <li>
+                        Test link:
+                        <a
+                          href="https://mbradds.github.io/transportation-report/"
+                          target="_blank"
+                          >https://mbradds.github.io/transportation-report/</a
+                        >
+                      </li>
+                      <li>
+                        Source code:
+                        <a
+                          href="https://github.com/mbradds/transportation-report"
+                          target="_blank"
+                          >https://github.com/mbradds/transportation-report</a
+                        >
+                      </li>
+                      <li>Release Date: June 9, 2021</li>
+                    </ul>
+                  </div>
+                </section> -->
+                <!-- <section class="panel panel-default">
+                  <header class="panel-heading">
+                    <h5 class="panel-title">2. Pipeline Profiles</h5>
+                  </header>
+                  <div class="panel-body">
+                    <ul class="lst-spcd">
+                      <li>
+                        Production link:
+                        <a
+                          href="https://www.cer-rec.gc.ca/en/data-analysis/facilities-we-regulate/pipeline-profiles/index.html"
+                          target="_blank"
+                        >
+                          https://www.cer-rec.gc.ca/en/data-analysis/facilities-we-regulate/pipeline-profiles/index.html
+                        </a>
+                      </li>
+                      <li>
+                        Test link:
+                        <a
+                          href="https://pipeline-profiles.herokuapp.com/"
+                          target="_blank"
+                          >https://pipeline-profiles.herokuapp.com/</a
+                        >
+                      </li>
+                      <li>
+                        Source code:
+                        <a
+                          href="https://github.com/mbradds/pipeline-profiles"
+                          target="_blank"
+                          >https://github.com/mbradds/pipeline-profiles</a
+                        >
+                      </li>
+                      <li>Release Date: Ongoing</li>
+                    </ul>
+                  </div>
+                </section> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+    <script src="./GCWeb/wet-boew/js/wet-boew.min.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/maps/modules/map.js"></script>
+    <script src="https://code.highcharts.com/modules/series-label.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.4.4/proj4.js"></script>
+    <script src="https://code.highcharts.com/maps/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/mapdata/custom/europe.js"></script>
+  </body>
+</html>

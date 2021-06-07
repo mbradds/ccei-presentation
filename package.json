@@ -1,0 +1,31 @@
+{
+  "name": "ccei-presentation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "dev": "webpack serve"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.14.3",
+    "@babel/plugin-transform-runtime": "^7.14.3",
+    "@babel/preset-env": "^7.14.4",
+    "babel-loader": "^8.2.2",
+    "clean-webpack-plugin": "*",
+    "copy-webpack-plugin": "^9.0.0",
+    "core-js": "^3.14.0",
+    "html-inline-script-webpack-plugin": "^2.0.1",
+    "html-webpack-plugin": "^5.3.1",
+    "react-dev-utils": "^11.0.4",
+    "webpack": "^5.38.1",
+    "webpack-cli": "^4.7.1",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.14.0"
+  }
+}
