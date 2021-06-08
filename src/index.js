@@ -303,7 +303,7 @@ function highchartsStuff(div) {
 
   const hcInfo = [
     {
-      prod: "",
+      prod: "https://www.cer-rec.gc.ca/en/data-analysis/facilities-we-regulate/2021/index.html",
       name: "Canada Pipeline System 2021",
       test: "https://mbradds.github.io/transportation-report/",
       code: "https://github.com/mbradds/transportation-report",
