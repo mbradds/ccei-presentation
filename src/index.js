@@ -16,6 +16,152 @@ const cerPalette = {
   hcLightBlue: "#91e8e1",
 };
 
+function exampleUpdating(div) {
+  Highcharts.chart(div, {
+    chart: {
+      type: "spline",
+      animation: Highcharts.svg, // don't animate in old IE
+      marginRight: 10,
+      events: {
+        load: function () {
+          // set up the updating of the chart each second
+          var series = this.series[0];
+          setInterval(function () {
+            var x = new Date().getTime(), // current time
+              y = Math.random();
+            series.addPoint([x, y], true, true);
+          }, 1000);
+        },
+      },
+    },
+
+    time: {
+      useUTC: false,
+    },
+
+    title: {
+      text: "",
+    },
+
+    xAxis: {
+      type: "datetime",
+      tickPixelInterval: 150,
+    },
+
+    yAxis: {
+      title: {
+        text: "Value",
+      },
+      plotLines: [
+        {
+          value: 0,
+          width: 1,
+          color: "#808080",
+        },
+      ],
+    },
+
+    tooltip: {
+      headerFormat: "<b>{series.name}</b><br/>",
+      pointFormat: "{point.x:%Y-%m-%d %H:%M:%S}<br/>{point.y:.2f}",
+    },
+
+    legend: {
+      enabled: false,
+    },
+
+    exporting: {
+      enabled: false,
+    },
+
+    series: [
+      {
+        name: "Random data",
+        data: (function () {
+          // generate an array of random data
+          var data = [],
+            time = new Date().getTime(),
+            i;
+
+          for (i = -19; i <= 0; i += 1) {
+            data.push({
+              x: time + i * 1000,
+              y: Math.random(),
+            });
+          }
+          return data;
+        })(),
+      },
+    ],
+  });
+}
+
+function example500k(div) {
+  function getData(n) {
+    var arr = [],
+      i,
+      x,
+      a,
+      b,
+      c,
+      spike;
+    for (
+      i = 0, x = Date.UTC(new Date().getUTCFullYear(), 0, 1) - n * 36e5;
+      i < n;
+      i = i + 1, x = x + 36e5
+    ) {
+      if (i % 100 === 0) {
+        a = 2 * Math.random();
+      }
+      if (i % 1000 === 0) {
+        b = 2 * Math.random();
+      }
+      if (i % 10000 === 0) {
+        c = 2 * Math.random();
+      }
+      if (i % 50000 === 0) {
+        spike = 10;
+      } else {
+        spike = 0;
+      }
+      arr.push([x, 2 * Math.sin(i / 100) + a + b + c + spike + Math.random()]);
+    }
+    return arr;
+  }
+  var n = 500000,
+    data = getData(n);
+
+  Highcharts.chart(div, {
+    chart: {
+      zoomType: "x",
+    },
+
+    title: {
+      text: "",
+    },
+
+    subtitle: {
+      text: "",
+    },
+
+    tooltip: {
+      valueDecimals: 2,
+    },
+
+    xAxis: {
+      type: "datetime",
+    },
+
+    series: [
+      {
+        data: data,
+        lineWidth: 0.5,
+        name: "Hourly data points",
+      },
+    ],
+  });
+}
+
 function exampleChart(div) {
   Highcharts.chart(div, {
     title: {
@@ -478,5 +624,7 @@ function pageSizeChart(div) {
 
 exampleChart("example-chart");
 exampleMap("example-map");
+exampleUpdating("example-live");
+example500k("example-500k");
 highchartsStuff("highcharts-stuff");
 pageSizeChart("page-sise-chart");

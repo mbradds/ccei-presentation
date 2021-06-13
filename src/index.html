@@ -38,7 +38,7 @@
                     <h5 class="panel-title">Anything to add?</h5>
                   </header>
                   <div class="panel-body">
-                    <ul class="lst-spcd">
+                    <ol class="lst-spcd">
                       <li>Introductions</li>
                       <li>What is Highcharts?</li>
                       <li>How have we used Highcharts at the CER?</li>
@@ -47,7 +47,7 @@
                       <li>Why Highcharts specifically?</li>
                       <li>What's next?</li>
                       <li>Questions?</li>
-                    </ul>
+                    </ol>
                   </div>
                 </section>
               </div>
@@ -65,27 +65,74 @@
                     <div id="example-chart"></div>
                   </div>
                   <footer class="panel-footer">
-                    Code:
-                    <a
-                      href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/line-basic"
-                      target="_blank"
-                      >JS Fiddle</a
+                    <small
+                      >Code:
+                      <a
+                        href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/line-basic"
+                        target="_blank"
+                        >JS Fiddle</a
+                      ></small
                     >
                   </footer>
                 </section>
+                <div class="row">
+                  <div class="col-md-6">
+                    <section class="panel panel-default">
+                      <header class="panel-heading">
+                        <h5 class="panel-title">Map - Real Time Data</h5>
+                      </header>
+                      <div class="panel-body">
+                        <div id="example-map"></div>
+                      </div>
+                      <footer class="panel-footer">
+                        <small
+                          >Code:
+                          <a
+                            href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/maps/demo/eu-capitals-temp"
+                            target="_blank"
+                            >JS Fiddle</a
+                          ></small
+                        >
+                      </footer>
+                    </section>
+                  </div>
+                  <div class="col-md-6">
+                    <section class="panel panel-default">
+                      <header class="panel-heading">
+                        <h5 class="panel-title">Chart - Live Data</h5>
+                      </header>
+                      <div class="panel-body">
+                        <div id="example-live"></div>
+                      </div>
+                      <footer class="panel-footer">
+                        <small
+                          >Code:
+                          <a
+                            href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/dynamic-update"
+                            target="_blank"
+                            >JS Fiddle</a
+                          ></small
+                        >
+                      </footer>
+                    </section>
+                  </div>
+                </div>
+
                 <section class="panel panel-default">
                   <header class="panel-heading">
-                    <h5 class="panel-title">Map - Real Time Data</h5>
+                    <h5 class="panel-title">500k Data Points</h5>
                   </header>
                   <div class="panel-body">
-                    <div id="example-map"></div>
+                    <div id="example-500k"></div>
                   </div>
                   <footer class="panel-footer">
-                    Code:
-                    <a
-                      href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/maps/demo/eu-capitals-temp"
-                      target="_blank"
-                      >JS Fiddle</a
+                    <small
+                      >Code:
+                      <a
+                        href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/line-boost"
+                        target="_blank"
+                        >JS Fiddle</a
+                      ></small
                     >
                   </footer>
                 </section>
@@ -95,9 +142,20 @@
                   </header>
                   <div class="panel-body">
                     <p>
+                      Documented
+                      <a href="https://www.highcharts.com/demo" target="_blank"
+                        >examples</a
+                      >
+                      on the Highcharts website.
+                    </p>
+                    <p>
                       Take a look at the links on the next slide. Highcharts can
                       be combined with other web frameworks/technologies to
                       create <strong>dashboard</strong> style vizualizations.
+                    </p>
+                    <p>
+                      Notice how all these charts load on the same page without
+                      major performance losses?
                     </p>
                   </div>
                 </section>
@@ -260,6 +318,35 @@
                       you wont notice this issue, because the vizualization is
                       running on your local computer, instead of a server.
                     </p>
+                    <div class="col-md-12">
+                      <h3>Latency is less of an issue with PowerBI</h3>
+                      <section>
+                        <div
+                          class="
+                            field
+                            field--name-field-powerbi
+                            field--type-link
+                            field--label-hidden
+                            field--item
+                          "
+                        >
+                          <div class="wb-inv">
+                            Start of visual interactive dashboard
+                          </div>
+                          <span class="clearfix"></span>
+                          <div class="resp-container">
+                            <iframe
+                              id="powerbi-node-1"
+                              class="resp-iframe"
+                              src="https://dv-vd.cloud.statcan.ca/CCEI-Crude-oil_en"
+                            ></iframe>
+                          </div>
+                          <div class="wb-inv">
+                            End of visual interactive dashboard
+                          </div>
+                        </div>
+                      </section>
+                    </div>
                   </div>
                 </section>
                 <section class="panel panel-default">
@@ -304,6 +391,49 @@
                       experience, and improve SEO. Google doesnt like large,
                       slow pages.
                     </p>
+                    <section class="panel panel-info">
+                      <header class="panel-heading">
+                        <h5 class="panel-title">Web Facts</h5>
+                      </header>
+                      <div class="panel-body">
+                        <ul>
+                          <li>
+                            Walmart saw up to a 2% increase in conversions for
+                            every second of improvement in load time. Every
+                            100ms improvement resulted in up to a 1% increase in
+                            revenue.
+                          </li>
+                          <li>Load speed impacts Google page rank.</li>
+                          <li>
+                            Slow pages are viewed as
+                            <strong>less credible and trustworthy.</strong>
+                          </li>
+                        </ul>
+                        <p>Our customers in 2017:</p>
+                        <ul>
+                          <li>
+                            <strong>37%</strong> of rural households have access
+                            to 50/10 Mbps
+                          </li>
+                          <li>
+                            <strong>97%</strong> of urban households have access
+                            to 50/10 Mbps
+                          </li>
+                          <li>
+                            About <strong>24%</strong> of households in
+                            Indigenous communities have access to 50/10 Mbps.
+                          </li>
+                        </ul>
+                        <small
+                          >Source:
+                          <a
+                            href="https://www.ic.gc.ca/eic/site/139.nsf/eng/h_00002.html"
+                            target="_blank"
+                            >Government of Canada</a
+                          >
+                        </small>
+                      </div>
+                    </section>
                   </div>
                 </section>
                 <section class="panel panel-default">
@@ -317,24 +447,80 @@
                       public outages and problems have burned us bad in the
                       past...
                     </p>
-                    <blockquote class="twitter-tweet">
-                      <p lang="en" dir="ltr">
-                        Our Developers are currently working on resolving a
-                        Tableau Public issue. It affects certain authoring
-                        actions (web and Desktop) which involve loading or
-                        publishing a Tableau Public workbook. Additional updates
-                        will be published to the Trust:
-                        <a href="https://t.co/DShKM0T4aF"
-                          >https://t.co/DShKM0T4aF</a
+                    <div id="tweets">
+                      <blockquote class="twitter-tweet">
+                        <p lang="en" dir="ltr">
+                          Our Developers are currently working on resolving a
+                          Tableau Public issue. It affects certain authoring
+                          actions (web and Desktop) which involve loading or
+                          publishing a Tableau Public workbook. Additional
+                          updates will be published to the Trust:
+                          <a href="https://t.co/DShKM0T4aF"
+                            >https://t.co/DShKM0T4aF</a
+                          >
+                          Thanks! -CT
+                        </p>
+                        &mdash; Tableau Support Team (@TableauSupport)
+                        <a
+                          href="https://twitter.com/TableauSupport/status/1374884865527713792?ref_src=twsrc%5Etfw"
+                          >March 25, 2021</a
                         >
-                        Thanks! -CT
-                      </p>
-                      &mdash; Tableau Support Team (@TableauSupport)
-                      <a
-                        href="https://twitter.com/TableauSupport/status/1374884865527713792?ref_src=twsrc%5Etfw"
-                        >March 25, 2021</a
-                      >
-                    </blockquote>
+                      </blockquote>
+                      <blockquote class="twitter-tweet">
+                        <p lang="en" dir="ltr">
+                          Tableau Engineers have identified a problem that is
+                          causing users to occasionally encounter an error
+                          message when loading a view in the Tableau Online
+                          10AZ. A solution to mitigate user impact is currently
+                          being worked on. For updates, go to
+                          <a href="https://t.co/qRCK9UCmLL"
+                            >https://t.co/qRCK9UCmLL</a
+                          >
+                          - TH
+                        </p>
+                        &mdash; Tableau Support Team (@TableauSupport)
+                        <a
+                          href="https://twitter.com/TableauSupport/status/1400342669147217928?ref_src=twsrc%5Etfw"
+                          >June 3, 2021</a
+                        >
+                      </blockquote>
+                      <blockquote class="twitter-tweet">
+                        <p lang="en" dir="ltr">
+                          Our Engineers have successfully resolved the temporary
+                          Tableau Public outage. Investigations into resolving
+                          user-reported issues with downloading and opening
+                          published workbooks remain ongoing. Updates will be
+                          posted to the Tableau Trust:
+                          <a href="https://t.co/rXJ36MSYu5"
+                            >https://t.co/rXJ36MSYu5</a
+                          >
+                          Thank you! -CT
+                        </p>
+                        &mdash; Tableau Support Team (@TableauSupport)
+                        <a
+                          href="https://twitter.com/TableauSupport/status/1375233182736523274?ref_src=twsrc%5Etfw"
+                          >March 25, 2021</a
+                        >
+                      </blockquote>
+                      <blockquote class="twitter-tweet">
+                        <p lang="en" dir="ltr">
+                          Our Engineers are aware of an issue affect some users
+                          attempting to access Tableau Public. We are working on
+                          updating the Tableau Trust with new information.
+                          Updates will be posted here:
+                          <a href="https://t.co/qZwNJjJpf5"
+                            >https://t.co/qZwNJjJpf5</a
+                          >
+                          We appreciate your patience while this issue is
+                          addressed. -CT
+                        </p>
+                        &mdash; Tableau Support Team (@TableauSupport)
+                        <a
+                          href="https://twitter.com/TableauSupport/status/1367204038505353217?ref_src=twsrc%5Etfw"
+                          >March 3, 2021</a
+                        >
+                      </blockquote>
+                    </div>
                     <script
                       async
                       src="https://platform.twitter.com/widgets.js"
@@ -350,7 +536,9 @@
                 </section>
                 <section class="panel panel-default">
                   <header class="panel-heading">
-                    <h5 class="panel-title">5. Customization</h5>
+                    <h5 class="panel-title">
+                      5. Customization & Future-proofing
+                    </h5>
                   </header>
                   <div class="panel-body">
                     <p>
@@ -363,7 +551,7 @@
                     </p>
                     <p>
                       There are several examples of functionality on the
-                      previous slide that cant be re-created with Tableau or
+                      previous slides that cant be re-created with Tableau or
                       PowerBI. When moving to the Highcharts/JavaScript
                       ecosytem, there are no limits, because there is always
                       going to be a right tool for the job.
@@ -428,7 +616,11 @@
                       work, and re-using old work compared to Tableau or
                       PowerBI. NPM (node package manager), allows me to download
                       and use JavaScript packages (such as Highcharts), but I
-                      can also create my own NPM packages that others can use.
+                      can also create my own
+                      <a href="https://www.npmjs.com/~mbradds" target="_blank"
+                        >NPM packages</a
+                      >
+                      that others can use.
                     </p>
                   </div>
                 </section>
@@ -681,7 +873,13 @@
                       </thead>
                       <tbody>
                         <tr>
-                          <td><strong>D3.js</strong></td>
+                          <td>
+                            <a
+                              href="https://apps2.cer-rec.gc.ca/energy-future/?page=by-region&mainSelection=electricityGeneration&yearId=2020&sector=&unit=petajoules&view=&baseYear=&compareYear=&noCompare=&scenarios=Evolving&provinces=YT,SK,QC,PE,ON,NU,NT,NS,NL,NB,MB,BC,AB&provinceOrder=YT,SK,QC,PE,ON,NU,NT,NS,NL,NB,MB,BC,AB&sources=&sourceOrder="
+                              target="_blank"
+                              ><strong>D3.js</strong></a
+                            >
+                          </td>
                           <td class="alert alert-danger">low</td>
                           <td class="alert alert-success">high</td>
                           <td class="alert alert-success">second to none</td>
@@ -749,6 +947,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
     <script src="./GCWeb/wet-boew/js/wet-boew.min.js"></script>
     <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/boost.js"></script>
     <script src="https://code.highcharts.com/maps/modules/map.js"></script>
     <script src="https://code.highcharts.com/modules/series-label.js"></script>
     <script src="https://code.highcharts.com/modules/accessibility.js"></script>
