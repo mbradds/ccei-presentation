@@ -43,6 +43,10 @@ function exampleUpdating(div) {
       text: "",
     },
 
+    credits: {
+      text: "",
+    },
+
     xAxis: {
       type: "datetime",
       tickPixelInterval: 150,
@@ -140,6 +144,10 @@ function example500k(div) {
       text: "",
     },
 
+    credits: {
+      text: "",
+    },
+
     subtitle: {
       text: "",
     },
@@ -170,6 +178,10 @@ function exampleChart(div) {
 
     subtitle: {
       text: "Source: thesolarfoundation.com",
+    },
+
+    credits: {
+      text: "",
     },
 
     yAxis: {
@@ -369,6 +381,10 @@ function exampleMap(div) {
 
     subtitle: {
       text: 'Data source: <a href="https://api.met.no/">https://api.met.no/</a>',
+    },
+
+    credits: {
+      text: "",
     },
 
     mapNavigation: {
